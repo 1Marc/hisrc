@@ -1,0 +1,19 @@
+<!doctype html>
+<html>
+<head>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.js"></script>
+  <script src="hisrc.js"></script>
+  <script>
+  $(document).ready(function(){
+    $("img:eq(0)").hisrc();
+    $("img:eq(1)").hisrc({
+      minwidth: 800
+    });
+  })
+  </script>
+</head>
+<body>
+  <img src='http://placehold.it/400x200.png' data-hisrc='http://placehold.it/800x200.png'>
+  <img src='http://placehold.it/400x200.png' data-hisrc='http://placehold.it/600x200.png'>
+</body>
+</html>
