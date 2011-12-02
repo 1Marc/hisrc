@@ -1,3 +1,10 @@
+/*
+ * Hisrc jQuery Plugin
+ *
+ * Copyright (c) 2011 "@1marc" Marc Grabanski
+ * Licensed under the MIT license.
+ */
+
 (function($){
 	$.hisrc = {
 		els: $(),
