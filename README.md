@@ -3,7 +3,7 @@ HiSRC
 
 ### A simple jQuery plugin to replace default (low resolution images) with larger images based on browser width.
 
-A twist on the old ['LOWSRC' IMG attribute](http://www.w3.org/TR/html5/obsolete.html#attr-img-lowsrc), which set a low-resolution image to be loaded first as a progressive JPEG loaded over it. Old school.
+A twist on the old [`LOWSRC` IMG attribute](http://www.w3.org/TR/html5/obsolete.html#attr-img-lowsrc), which set a low-resolution image to be loaded first as a progressive JPEG loaded over it. Old school.
 
 The browser loads the low-resolution image first. Then jQuery plugin checks the resolution of the browser, if the high-resolution solution should be delivered to the browser.
 
