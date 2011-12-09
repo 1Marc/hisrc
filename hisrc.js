@@ -39,7 +39,7 @@
 			
 			$(this)
 				.on('swapres.hisrc', function(){
-					if ($(window).width() > settings.minwidth || connection.type == 0) {
+					if ($(window).width() > settings.minwidth || connection.type == "") {
 						$(this).attr('src', $(this).data('hisrc'));
 					} else {
 						$(this).attr('src', $(this).data('lowsrc'));
