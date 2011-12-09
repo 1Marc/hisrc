@@ -10,7 +10,7 @@ A twist on the old school [`LOWSRC` `IMG` attribute](http://www.w3.org/TR/html5/
 How the HiSRC jQuery Plugin Works
 =====
 
-The browser loads the low-resolution image first. 
+The browser loads the low-resolution image first with an old-fashion `IMG` `SRC` attribute.
 
 Then the HiSRC jQuery plugin checks the resolution of the browser. 
 
