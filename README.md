@@ -47,7 +47,7 @@ The high-resolution image links should be placed as the value of `data-hisrc` in
 <h2>Regular images</h1>	
 	<img src="http://placehold.it/400x200.png">
 	<img src="http://placehold.it/400x200.png">
-	```
+```
 
 More Resources
 =====
