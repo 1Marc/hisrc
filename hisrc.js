@@ -16,17 +16,19 @@
 		// change minimum width, if you wish
 		minwidth: 640
 	}
-	
+
+
 	$.fn.hisrc = function(options) {
 		var settings = $.extend({}, $.hisrc.defaults, options);
-	
-		// bandwidth test sourced from Modernizr
-		var connection = navigator.connection || { type: 0 }; 
-	 	return connection.type == 3 // connection.CELL_2G 
-			|| connection.type == 4 // connection.CELL_3G
-			|| /^[23]g$/.test(connection.type); // string value in new spec
-	
+
+		var lowbandwith = 0; // no
+		var connection = navigator.connection || { type: 0 };
 		
+		if (connection == (3 || 4 ) ) {
+			var lowbandwidth = 1; // yes			
+		}
+
+
 		$.hisrc.els = $.hisrc.els.add(this);
 		
 		if (!$.hisrc.init) {
@@ -40,7 +42,7 @@
 			
 			$(this)
 				.on('swapres.hisrc', function(){
-					if ($(window).width() > settings.minwidth || connection.type == "") {
+					if ($(window).width() > settings.minwidth || lowbandwith == 0) {
 						$(this).attr('src', $(this).data('hisrc'));
 					} else {
 						$(this).attr('src', $(this).data('lowsrc'));

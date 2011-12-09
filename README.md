@@ -14,6 +14,8 @@ Then the HiSRC jQuery plugin checks the resolution of the browser.
 
 If the browser resolution is wider than the default 640 pixels width, then the plugin overwrites the low-resolution image for the higher resolution image.
 
+However, if mobile bandwidth is detected (like 3G), the low-resolutions stay in place. 
+
 Setting up
 =====
 
@@ -22,15 +24,30 @@ Associate jQuery to your web document as well as the HiSRC plugin as well.
 In this code example, jQuery is link to Google's CDN and the HiSRC plugin is in the same directory as the web document:
 
 ```html
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.0/jquery.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.js"></script>
 <script src="hisrc.js"></script>
+```
+
+```html
+$(document).ready(function(){
+  $(".hisrc img").hisrc();
+  $(".hisrc img+img").hisrc({ minwidth: 800 });
+})
 ```
 
 The high-resolution image links should be placed as the value of `data-hisrc` in the markup of your web page:
 
 ```html
-<img src="http://placehold.it/400x200.png" data-hisrc="http://placehold.it/800x200.png" alt="unicorns">
-```
+<h1>HiSRC Images</h1>	
+	<div class="hisrc">
+		<img src="http://placehold.it/400x200.png" data-hisrc="http://placehold.it/640x200.png">
+		<img src="http://placehold.it/400x200.png" data-hisrc="http://placehold.it/800x200.png">
+	</div>
+
+<h2>Regular images</h1>	
+	<img src="http://placehold.it/400x200.png">
+	<img src="http://placehold.it/400x200.png">
+	```
 
 More Resources
 =====
