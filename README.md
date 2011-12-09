@@ -3,7 +3,9 @@ HiSRC
 
 ### A simple jQuery plugin for adaptive images in responsive web design
 
-A twist on the old school [`LOWSRC` `IMG` attribute](http://www.w3.org/TR/html5/obsolete.html#attr-img-lowsrc), which would render a lower file size image first while a larger file size image would appears in its place later.
+A twist on the old school [`LOWSRC` `IMG` attribute](http://www.w3.org/TR/html5/obsolete.html#attr-img-lowsrc), which would render a lower file size image first while a larger file size image would appears in its place later. 
+
+Back to the future, we leave the lower file size image if the HiSRC plugin can't detect a high resolution or fast mobile speed.
 
 How the HiSRC jQuery Plugin Works
 =====
