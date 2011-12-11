@@ -37,7 +37,11 @@ $(document).ready(function(){
 })
 ```
 
+
+
 The high-resolution image links should be placed as the value of `data-hisrc` in the markup of your web page:
+
+
 
 ```html
 <h1>HiSRC Images</h1>	
@@ -46,7 +50,7 @@ The high-resolution image links should be placed as the value of `data-hisrc` in
 		<img src="http://placehold.it/400x200.png" data-hisrc="http://placehold.it/800x200.png">
 	</div>
 
-<h2>Regular images</h1>	
+<h2>Regular images</h2>	
 	<img src="http://placehold.it/400x200.png">
 	<img src="http://placehold.it/400x200.png">
 ```
