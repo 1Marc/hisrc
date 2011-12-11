@@ -30,6 +30,8 @@ In this code example, jQuery is link to Google's CDN and the HiSRC plugin is in 
 <script src="hisrc.js"></script>
 ```
 
+Use basic jQuery to pick out which images should be HiSRC'd:
+
 ```html
 $(document).ready(function(){
   $(".hisrc img").hisrc();
