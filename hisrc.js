@@ -24,7 +24,7 @@
 		var lowbandwith = 0; // no
 		var connection = navigator.connection || { type: 0 };
 		
-		if (connection == (3 || 4 ) ) {
+		if (connection == (3 || 4) ) {
 			var lowbandwidth = 1; // yes			
 		}
 
@@ -42,8 +42,10 @@
 			
 			$(this)
 				.on('swapres.hisrc', function(){
-					if ($(window).width() > settings.minwidth || lowbandwith == 0) {
-						$(this).attr('src', $(this).data('hisrc'));
+					if (lowbandwith == 1) {
+						$(this).attr('src', $(this).data('lowsrc'));
+					} else if ($(window).width() > settings.minwidth) {
+						$(this).attr('src', $(this).data('hisrc'))
 					} else {
 						$(this).attr('src', $(this).data('lowsrc'));
 					}
