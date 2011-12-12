@@ -62,5 +62,7 @@ The high-resolution image links should be placed as the value of `data-hisrc` in
 More Resources
 =====
 
-Do you need a more robust, server-side solution? Try [Responsive Images](https://github.com/filamentgroup/Responsive-Images). Requires PHP and editing `.htaccess` files
+* [Flashpix](http://en.wikipedia.org/wiki/FlashPix) image format that stores multiple resolution versions. 
+* Do you need a more robust, server-side solution? Try 
+[Responsive Images](https://github.com/filamentgroup/Responsive-Images). Requires PHP and editing `.htaccess` files
 

@@ -6,7 +6,7 @@
   <script>
   $(document).ready(function(){
     $(".hisrc img").hisrc();
-    $(".hisrc img+img").hisrc({ minwidth: 800 });
+    $(".hisrc img+img+img").hisrc({ minwidth: 800 });
   })
   </script>
  <style type="text/css">
@@ -19,6 +19,7 @@
 
 <h1>HiSRC Images</h1>	
 	<div class="hisrc">
+		<img src="TEST/TEST-lowresolution.png" data-hisrc="TEST/TEST-hiresolution.png">
 		<img src="http://placehold.it/400x200.png" data-hisrc="http://placehold.it/640x200.png">
 		<img src="http://placehold.it/400x200.png" data-hisrc="http://placehold.it/800x200.png">
 	</div>
