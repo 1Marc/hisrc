@@ -21,13 +21,8 @@
 	$.fn.hisrc = function(options) {
 		var settings = $.extend({}, $.hisrc.defaults, options);
 
-		var lowbandwith = 0; // no
-		var connection = navigator.connection || { type: 0 };
-		
-		if (connection == (3 || 4) ) {
-			var lowbandwidth = 1; // yes			
-		}
-
+		// check bandwidth
+		var lowbandwith = ((navigator.connection || { type: 0 }) == (3 || 4)) ? 1 : 0;
 
 		$.hisrc.els = $.hisrc.els.add(this);
 		
