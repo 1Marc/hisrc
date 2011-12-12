@@ -7,6 +7,10 @@
   $(document).ready(function(){
    $(".hisrc img").hisrc();
 
+	var lowbandwidth = ((navigator.connection || { type: 0 }) == (3 || 4 || /^[23]g$/.test(connection.type) )) ? 1 : 0;
+	
+	alert(lowbandwidth);
+
   })
 
   </script>
