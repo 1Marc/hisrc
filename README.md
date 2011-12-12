@@ -5,7 +5,9 @@ HiSRC
 
 A twist on the old school [`LOWSRC` `IMG` attribute](http://www.w3.org/TR/html5/obsolete.html#attr-img-lowsrc), which would render a lower file size image first while a larger file size image would appears in its place later. 
 
-Back to the future, we leave the lower file size image if the HiSRC plugin can't detect a high resolution or fast mobile speed.
+Back to the future, we set in the markup and leave the lower file size image.
+
+However, if the HiSRC plugin detects fast network or high resolution, then a high resolution image takes the image's place.
 
 How the HiSRC jQuery Plugin Works
 =====
