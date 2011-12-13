@@ -21,13 +21,13 @@
 	$.fn.hisrc = function(options) {
 		var settings = $.extend({}, $.hisrc.defaults, options);
 
-		// check bandwidth via @Modernizr's network-connection.js 
+		// check bandwidth
 		var connection = navigator.connection || { type: 0 }; // polyfill
 		if (connection.type == 3 
 			|| connection.type == 4 
 			|| /^[23]g$/.test(connection.type) ) {
 				connection = 1;
-		}
+			}
 			
 		$.hisrc.els = $.hisrc.els.add(this);
 		
@@ -43,9 +43,9 @@
 			$(this)
 				.on('swapres.hisrc', function(){
 					if (connection == 1) {
-						$(this).attr('src', $(this).data('lowsrc'));
+						$(this).attr('src', $(this).attr('data-lowbandwidth'));
 					} else if ($(window).width() > settings.minwidth) {
-						$(this).attr('src', $(this).data('hisrc'))
+						$(this).attr('src', $(this).attr('data-hisrc'))
 					} else {
 						$(this).attr('src', $(this).data('lowsrc'));
 					}
