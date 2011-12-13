@@ -21,7 +21,7 @@
 	$.fn.hisrc = function(options) {
 		var settings = $.extend({}, $.hisrc.defaults, options);
 
-		// check bandwidth
+		// check bandwidth via @Modernizr's network-connection.js 
 		var connection = navigator.connection || { type: 0 }; // polyfill
 		if (connection.type == 3 
 			|| connection.type == 4 
